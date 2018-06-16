@@ -1,0 +1,19 @@
+body {
+background: lightpink;
+}
+
+
+
+.crystals {
+    justify-content: space-around;
+    display: flex;
+    align-items: center;    
+}
+
+
+.crystal {
+border: 1px solid green;
+height: 200px;
+width: 200px;
+}
+
