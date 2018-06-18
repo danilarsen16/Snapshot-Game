@@ -1,19 +1,74 @@
 body {
-background: lightpink;
+    background: url("http://freshwallpapers.in/download/black_ink_in_water-1920x1200.jpg");
+    font-size: 40px;
+    color: black;
+    background-repeat: no-repeat;
+    background-size: 140%;
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    min-inline-size: linear-gradient(rgba(#F9774C, .75), rgba(#802A0C, .85)),
+    }
+
+
+
+#stats {
+    color: black;
+    padding-top: 8px;
+}
+    
+
+
+#userClick {
+    margin: 0px;
+    font-family: 'Rajdhani', sans-serif;
 }
 
 
 
-.crystals {
+
+
+#result {
+    font-size: 100px;
+    font-family: 'Rajdhani', sans-serif;
+    color: black;    
+    margin: auto;
+}
+
+
+
+
+.allCrystals {
     justify-content: space-around;
     display: flex;
     align-items: center;    
 }
 
 
-.crystal {
-border: 1px solid green;
-height: 200px;
-width: 200px;
+
+
+.crystal1 {
+    height: 220px;
+    width: 220px;
+    opacity: 0.9;
+    border-style: solid;
+    border-color: white;
+    border-top-width: 10px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 40px;
 }
 
+
+
+#instructions {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 30px;
+    line-height: 0%;
+    background-color: black;
+    opacity: 0.8;
+    padding: 10px;
+    margin-left: 12%;
+    margin-right: 12%;
+    margin-top: 30px;
+    color:white;
+}

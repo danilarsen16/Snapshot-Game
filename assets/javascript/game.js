@@ -9,24 +9,34 @@
 
         var resetAndStart = function () {
 
-            $(".crystals").empty();
+            $(".allCrystals").empty();
     
+            
+            var images = ['https://i.pinimg.com/564x/10/2e/97/102e9759c008a45357295e089e2e2398.jpg',
+                         'https://i.pinimg.com/564x/e7/30/73/e73073b3078570983e13ac5f81b3ef74.jpg',
+                         'https://i.pinimg.com/564x/f7/5c/13/f75c1326951cca47b8f813ae46f02108.jpg',
+                         'https://i.pinimg.com/564x/d5/23/3e/d5233eda50e07044204bb82e639b59b9.jpg'];
+
             randomResult = Math.floor(Math.random() * 69) + 30;
 
-            $("#result").html('Goal Number: ' + randomResult);
+            $("#result").html('Camera Capacity: ' + randomResult);
 
 
     for (var i = 0; i < 4; i++) {
 
         var random = Math.floor(Math.random() * 11) + 1;
-        var crystal = $("<div>");
-        crystal.attr({
-            "class": 'crystal',
+        var crystal1 = $("<div>");
+        crystal1.attr({
+            "class": 'crystal1',
             "data-random": random
     });
+        crystal1.css({
+            "background-image":"url('" + images[i] + "')",
+            "background-size":"cover"
+        });
 
         console.log(random)        
-        $(".crystals").append(crystal);
+        $(".allCrystals").append(crystal1);
 
     }
 
@@ -37,7 +47,7 @@
 resetAndStart();
 
 // Event deligation
-$(document).on('click', ".crystal", function () {
+$(document).on('click', ".crystal1", function () {
 
     var num = parseInt($(this).attr('data-random'));
     userClick += num;
@@ -56,7 +66,6 @@ $(document).on('click', ".crystal", function () {
 
         win++;
         $("#win").html("Your Wins: " + win);
-        alert("yay, you won!")
         userClick = 0;
         resetAndStart();
     }
